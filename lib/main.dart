@@ -35,7 +35,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
 
   buttonPressed(String buttonText) {
     setState(() {
-      if (buttonText == "C") {
+      if (buttonText == "AC") {
         equation = "";
         result = "0";
         equationFontSize = 38.0;
@@ -123,9 +123,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
               style: TextStyle(fontSize: resultFontSize, color: Colors.white),
             ),
           ),
-          Expanded(
-            child: Divider(),
-          ),
+          Expanded(child: Divider()),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -134,9 +132,9 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                 child: Table(
                   children: [
                     TableRow(children: [
-                      buildButton("C", 1, Colors.redAccent),
-                      buildButton("⌫", 1, Colors.blue),
-                      buildButton("÷", 1, Colors.blue),
+                      buildButton("AC", 1, Colors.grey[400]),
+                      buildButton("⌫", 1, Colors.grey[400]),
+                      buildButton("%", 1, Colors.grey[400]),
                     ]),
                     TableRow(children: [
                       buildButton("7", 1, Colors.grey[900]),
@@ -166,16 +164,19 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                 child: Table(
                   children: [
                     TableRow(children: [
-                      buildButton("×", 1, Colors.blue),
+                      buildButton("×", 1, Colors.yellow[900]),
                     ]),
                     TableRow(children: [
-                      buildButton("-", 1, Colors.blue),
+                      buildButton("-", 1, Colors.yellow[900]),
                     ]),
                     TableRow(children: [
-                      buildButton("+", 1, Colors.blue),
+                      buildButton("+", 1, Colors.yellow[900]),
                     ]),
                     TableRow(children: [
-                      buildButton("=", 2, Colors.redAccent),
+                      buildButton("/", 1, Colors.yellow[900]),
+                    ]),
+                    TableRow(children: [
+                      buildButton("=", 1, Colors.yellow[900]),
                     ]),
                   ],
                 ),
