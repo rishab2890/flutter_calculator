@@ -80,7 +80,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
       String buttonText, double buttonHeight, Color buttonColor) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1 * buttonHeight,
-      color: buttonColor,
+      color: Colors.black,
       child: RawMaterialButton(
           shape: CircleBorder(
               side: BorderSide(
