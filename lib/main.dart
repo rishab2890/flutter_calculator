@@ -82,9 +82,10 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
       height: MediaQuery.of(context).size.height * 0.1 * buttonHeight,
       color: Colors.black,
       child: RawMaterialButton(
+          fillColor: buttonColor,
           shape: CircleBorder(
               side: BorderSide(
-                  color: Colors.white, width: 1, style: BorderStyle.solid)),
+                  color: buttonColor, width: 1, style: BorderStyle.solid)),
           padding: EdgeInsets.all(16.0),
           onPressed: () => buttonPressed(buttonText),
           child: Text(
@@ -138,24 +139,24 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                       buildButton("÷", 1, Colors.blue),
                     ]),
                     TableRow(children: [
-                      buildButton("7", 1, Colors.black54),
-                      buildButton("8", 1, Colors.black54),
-                      buildButton("9", 1, Colors.black54),
+                      buildButton("7", 1, Colors.grey[900]),
+                      buildButton("8", 1, Colors.grey[900]),
+                      buildButton("9", 1, Colors.grey[900]),
                     ]),
                     TableRow(children: [
-                      buildButton("4", 1, Colors.black54),
-                      buildButton("5", 1, Colors.black54),
-                      buildButton("6", 1, Colors.black54),
+                      buildButton("4", 1, Colors.grey[900]),
+                      buildButton("5", 1, Colors.grey[900]),
+                      buildButton("6", 1, Colors.grey[900]),
                     ]),
                     TableRow(children: [
-                      buildButton("1", 1, Colors.black54),
-                      buildButton("2", 1, Colors.black54),
-                      buildButton("3", 1, Colors.black54),
+                      buildButton("1", 1, Colors.grey[900]),
+                      buildButton("2", 1, Colors.grey[900]),
+                      buildButton("3", 1, Colors.grey[900]),
                     ]),
                     TableRow(children: [
-                      buildButton(".", 1, Colors.black54),
-                      buildButton("0", 1, Colors.black54),
-                      buildButton("00", 1, Colors.black54),
+                      buildButton(".", 1, Colors.grey[900]),
+                      buildButton("0", 1, Colors.grey[900]),
+                      buildButton("00", 1, Colors.grey[900]),
                     ]),
                   ],
                 ),
